@@ -24,5 +24,9 @@ namespace Launcher
         {
             InitializeComponent();
         }
+
+        private void OnCloseBtnClicked(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
