@@ -31,7 +31,7 @@ namespace Launcher
         public static string AppCachePath
         {
             get {
-                var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Frxx");
+                var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Company);
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
@@ -50,10 +50,12 @@ namespace Launcher
         /// 解压完是否删除压缩包
         /// </summary>
         public static bool DelZipAfterUnzip = true;
+        public const string Company = "cyygame";
+        public const string GameMain = "frxx";
         public static string AppName = "凡人修仙";
         public static string GameFolderName{
             get {
-                return Path.Combine("Frxx", "game");
+                return Path.Combine(Company, Path.Combine(GameMain, "game"));
             }
         }
         private static string GameDataPath
@@ -81,7 +83,7 @@ namespace Launcher
                     }
                     else
                     {
-                        DataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), GameFolderName);
+                        DataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GameFolderName);
                     }
 
                     CacheFile file = new CacheFile(DataPath);
