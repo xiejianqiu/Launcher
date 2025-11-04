@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO.Compression;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Diagnostics;
@@ -45,48 +42,23 @@ namespace Launcher
                             foreach (var zipArchiveEntry in archive.Entries)
                             {
                                 nofUnzip += 1;
-                                if (!zipArchiveEntry.FullName.EndsWith("/"))
-                                {
-                                    var entryFilePath = Regex.Replace(zipArchiveEntry.FullName.Replace("/", @"\"),
+
+                                var entryFilePath = Regex.Replace(zipArchiveEntry.FullName.Replace("/", @"\"),
                                         @"^\\*", "");
-                                    var filePath = directoryInfo + entryFilePath; //设置解压路径
-                                    var content = new byte[zipArchiveEntry.Length];
-                                    zipArchiveEntry.Open().Read(content, 0, content.Length);
-
-                                    //if (File.Exists(filePath) && content.Length == new FileInfo(filePath).Length)
-                                    //    continue; //跳过相同的文件，否则覆盖更新
-
-                                    var sameDirectoryNameFilePath = new DirectoryInfo(filePath);
-                                    if (sameDirectoryNameFilePath.Exists)
+                                var filePath = directoryInfo + entryFilePath; //设置解压路径
+                                if (zipArchiveEntry.FullName.EndsWith("/"))
+                                {
+                                    
+                                    if (!Directory.Exists(filePath))
                                     {
-                                        sameDirectoryNameFilePath.Delete(true);
-                                        DeleteDirectoryWithCmd(filePath);
-                                        /*if (!DeleteDirectoryWithCmd(filePath))
-                                        {
-                                            Console.WriteLine(filePath + "删除失败");
-                                            resualt = false;
-                                            break;
-                                        }*/
+                                        Directory.CreateDirectory(filePath);
                                     }
-                                    var sameFileNameFilePath = new FileInfo(filePath);
-                                    if (sameFileNameFilePath.Exists)
-                                    {
-                                        sameFileNameFilePath.Delete();
-                                        DelFileWithCmd(filePath);
-                                        /*if (!DelFileWithCmd(filePath))
-                                        {
-                                            Console.WriteLine(filePath + "删除失败");
-                                            resualt = false;
-                                            break;
-                                        }*/
-                                    }
-                                    var greatFolder = Directory.GetParent(filePath);
-                                    if (!greatFolder.Exists) greatFolder.Create();
-                                    File.WriteAllBytes(filePath, content);
-                                    OnProgressHandler?.Invoke(nofUnzip * 1f / nOfFiles);
-                                    if (0 == nofUnzip % 10)
-                                        Thread.Sleep(100);
+                                    continue;
                                 }
+                                zipArchiveEntry.ExtractToFile(filePath);
+                                OnProgressHandler?.Invoke(nofUnzip * 1f / nOfFiles);
+                                if (0 == nofUnzip % 100)
+                                    Thread.Sleep(100);
                             }
                             IsUnzipFinish = true;
                         }
