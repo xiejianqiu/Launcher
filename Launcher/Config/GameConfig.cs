@@ -131,7 +131,7 @@ namespace Launcher
                 return Path.Combine(GameConfig.GameSavePath, "AppInfo.json");
             }
         }
-        public const string newAppVerUrl = "http://taigu-360-self-cdn.cyygame.cn/game/tgsw3/qq/packages/qk/newAppInfo.json";
+        public const string newAppVerUrl = "http://taigu-360-self-cdn.cyygame.cn/game/tgsw3/koreapc/packages/newAppInfo.json";
         public const int ProgressOfStartUp = 10;
         public const int ProgressOfDLZip = 60;
         public const int ProgressOfUnzip = 30;
