@@ -94,6 +94,7 @@ begin
     begin
       Insert(ParamStr(i), CmdLine,length(CmdLine)+1);
       Insert(' ',CmdLine,length(CmdLine)+1);
+      // Log(Format('### GetAllParam  index:%d  pargma:%s', [i, ParamStr(i)]));
     end;
     Result := CmdLine;
 end;
