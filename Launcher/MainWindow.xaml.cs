@@ -78,8 +78,9 @@ namespace Launcher
 
             if (CanOpenLoginWindow)
             {
-                LogTool.Instance.Info($"###CommandLine {Environment.CommandLine} length:{Environment.GetCommandLineArgs().Length}");
-                CommonTools.RunExe(GameConfig.GameExe, Environment.GetCommandLineArgs()[1]);
+                var pargma = Environment.GetCommandLineArgs()[1];
+                LogTool.Instance.Info($"###CommandLine 参数:{pargma}");
+                CommonTools.RunExe(GameConfig.GameExe, pargma);
                 CommonTools.Exit();
                 CanOpenLoginWindow = false;
             }
