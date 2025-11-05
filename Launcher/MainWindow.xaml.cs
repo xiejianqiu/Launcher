@@ -40,7 +40,7 @@ namespace Launcher
             Index.Inst.OpenChannelLoginWindow += OpenChannelLoginWindow;
             Index.Inst.Start();
             CommonTools.CreateDesktopShortcut();
-            LogTool.Instance.Info($"MainWindow Start {GameConfig.CHANNEL_LOGIN_URL}");
+            //LogTool.Instance.Info($"MainWindow Start {GameConfig.CHANNEL_LOGIN_URL}");
         }
 
         private void OpenChannelLoginWindow()
