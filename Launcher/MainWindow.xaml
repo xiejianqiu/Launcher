@@ -25,7 +25,7 @@
                 </TransformGroup>
             </ProgressBar.RenderTransform>
         </ProgressBar>
-        <Label x:Name="TipLab" Content="Label" Margin="107,183,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="400" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Padding="0,5,0,5" Background="{x:Null}" Foreground="#FF00FF4A"/>
+        <Label x:Name="TipLab" Content="" Margin="107,183,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="400" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Padding="0,5,0,5" Background="{x:Null}" Foreground="#FF00FF4A"/>
         <Button x:Name="CloseBtn" Grid.Column="1" Content="X" Click="OnCloseBtnClicked" VerticalAlignment="Top" HorizontalAlignment="Right" Width="30" Height="30" Background="Transparent" FontSize="20" Margin="0,10,10,0"/>
 
     </Grid>
