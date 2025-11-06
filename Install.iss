@@ -111,8 +111,8 @@ Source: "D:\Launcher\publish\*"; DestDir: "{app}"; Flags: ignoreversion recurses
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+;Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+;Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Registry]
 Root: HKLM; SubKey: Software\LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
