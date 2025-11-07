@@ -142,6 +142,6 @@ namespace Launcher
         public const string IN_DOWNLOAD_ZIPFILE = "正在更新游戏版本...{0:f2}%";
         public const string IN_UNZIP = "正在解压文件...{0:f2}%";
         public const string START_GAME = "正在启动游戏...{0:f2}%";
-
+        public const string DOWNLOAD_FAILED = "下载失败，请尝试重启";
     }
 }

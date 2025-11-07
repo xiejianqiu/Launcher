@@ -112,7 +112,7 @@ namespace Launcher
                 {
                     File.Delete((string)savePath);
                 }
-                var result = MessageBox.Show("下载失败，请尝试重启");
+                var result = MessageBox.Show(TIPS.DOWNLOAD_FAILED);
                 if (result == MessageBoxResult.OK)
                 {
                     CommonTools.Exit();
