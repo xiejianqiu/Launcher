@@ -52,7 +52,7 @@ namespace Launcher
         public static bool DelZipAfterUnzip = true;
         public const string Company = "cyygame";
         public const string GameMain = "frxx";
-        public static string AppName = "凡人修仙";
+        public static string AppName = "범인수선";
         public static string GameFolderName{
             get {
                 return Path.Combine(Company, Path.Combine(GameMain, "game"));

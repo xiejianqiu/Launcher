@@ -5,7 +5,7 @@
 #define MyAppVersion "1.0.0.2"
 #define MyAppPublisher "cyygame"
 #define MyAppURL ""
-#define MyAppExeName "Launcher.exe"
+#define MyAppExeName "범인수선.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
