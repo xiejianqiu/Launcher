@@ -115,7 +115,7 @@ Source: "D:\Launcher\publish\*"; DestDir: "{app}"; Flags: ignoreversion recurses
 ;Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Registry]
-Root: HKCR; SubKey: Software\LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
+Root: HKCR; SubKey: LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
 Root: HKCR; SubKey: LaunchCyyFrxx; ValueName: "URL Protocol";ValueData:{app}\{#MyAppExeName}; Flags: CreateValueIfDoesntExist; ValueType: string;
 Root: HKCR; SubKey: LaunchCyyFrxx\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: CreateValueIfDoesntExist; ValueType: string;
 
