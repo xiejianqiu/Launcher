@@ -129,7 +129,7 @@ Root: HKCR; SubKey: Local Settings\Software\Microsoft\Windows\Shell\MuiCache; Va
 ;Root: HKCR; SubKey: LaunchCyyFrxx; ValueName: "URL Protocol";ValueData:{app}\{#MyAppExeName}; Flags: CreateValueIfDoesntExist; ValueType: string;
 ;Root: HKCR; SubKey: LaunchCyyFrxx\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: CreateValueIfDoesntExist; ValueType: string;
 
-Root: HKCU; SubKey: "Software\Microsoft\Windows\Shell\MuiCache"; ValueName: "{userappdata}\cyygame\Frxx\{#MyAppExeName}.FriendlyAppName"; ValueType: string; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist
+;Root: HKCU; SubKey: "Software\Microsoft\Windows\Shell\MuiCache"; ValueName: "{userappdata}\cyygame\Frxx\{#MyAppExeName}.FriendlyAppName"; ValueType: string; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Parameters: " {code:GetAllParam}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
