@@ -1,0 +1,104 @@
+
+<link rel='stylesheet' type='text/css' href='/css/bombasic.css'>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function goStart() {
+		var f = document.startForm;
+		f.method="get";
+		f.target="chargeFrame";
+		f.action="g1.html";
+		f.submit();
+		return;
+	}
+
+	function goCharge() {
+		var f = document.chargeForm;
+		if(f.id.value=="") {
+			alert("ID Check!");
+			return;
+		}
+		
+		f.target="chargeFrame";
+		f.action="charge.html";
+		f.submit();
+		return;
+	}
+
+//-->
+</SCRIPT>
+<body bgcolor="" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table cellspacing=0 cellpadding=0  width=97% border=0 align=center>
+<tr bgcolor="white">
+	<td colspan="13">	
+		<br><b>##Dev TestPage<br>	</td>
+</tr>
+</table>
+<table cellspacing=0 cellpadding=1 bordercolorlight=999999 bordercolordark=ffffff border=1  width="97%" align="center" >
+ <tr bgcolor="white">
+	<td width="200" align="center">## Game Start : 登录接口</td>
+	<td colspan="" align="left">	 
+	<form name="startForm">
+		<table cellspacing=0 cellpadding=1 bordercolorlight=999999 bordercolordark=ffffff border=1  width="50%" align="left" >
+		<tr bgcolor="white">	
+			<td colspan="" align="center">	URL Protocol</td>
+			<td colspan="">	<input type="text" size="30" class="input" name="pro" placeholder="LaunchCyyFrxx" value="LaunchCyyFrxx">&nbsp;必须</td>
+		</tr>
+		<tr bgcolor="white">	
+			<td colspan="" align="center">	sid</td>
+			<td colspan="">	<input type="text" size="30" class="input" name="sid" placeholder="889" value="889">&nbsp;必须</td>
+		</tr>
+		<tr bgcolor="white">	
+			<td colspan="" align="center">	uid</td>
+			<td colspan="">	<input type="text" size="30" class="input" name="uid" placeholder="testid001">&nbsp;必须</td>
+		</tr>
+		<tr bgcolor="white">	
+			<td colspan="" align="center">	fcm</td>
+			<td colspan="">	<input type="text" size="30" class="input" name="fcm" placeholder="0" value="0">&nbsp;固定值(0)</td>
+		</tr>
+		<tr bgcolor="white">	
+			<td colspan="" align="center">	ext</td>
+			<td colspan="">	<input type="text" size="30" class="input" name="ext" placeholder="" value="">&nbsp;空值</td>
+		</tr>
+		<tr bgcolor="white">	
+			<td colspan="" align="center">	type</td>
+			<td colspan="">	<input type="text" size="30" class="input" name="type" placeholder="1" value="1">&nbsp;固定值(1)</td>
+		</tr>
+		<tr bgcolor="white">	
+			<td colspan="2" align="center">
+				<input type="button" class="btn4"  onmouseover="this.style.backgroundColor='#cccccc'" onmouseout="this.style.backgroundColor=''" onfocus='this.blur()' style='cursor:hand' value="Submit" onclick="javascript:goStart();">
+			</td>
+		</tr>
+		</table>
+	</td>
+	</form>
+</tr>
+<!-- 
+
+<tr bgcolor="white">
+	<td width="200">## Gold :</td>
+	<td colspan="">	 
+	<form name="chargeForm">
+		<select name="server">		
+		<option value="9001">(9001)Test Server</option>			
+		<option value="9002">(9002)Test Server</option>			
+			
+		</select>
+		&nbsp;&nbsp;
+		ID <input type="text" size="30" class="input" name="id">
+		
+		&nbsp;&nbsp;
+
+		<b>Price(won/gold)
+			<select name="param_price" id="param_price">
+					<option value=300|10|gt_001>300won (10gold)</option><option value=700|30|gt_002>700won (30gold)</option><option value=1300|60|gt_003>1,300won (60gold)</option><option value=2600|120|gt_004>2,600won (120gold)</option><option value=3900|180|gt_005>3,900won (180gold)</option><option value=5500|250|gt_006>5,500won (250gold)</option><option value=6600|300|gt_007>6,600won (300gold)</option><option value=8800|400|gt_008>8,800won (400gold)</option><option value=9900|450|gt_009>9,900won (450gold)</option><option value=11000|500|gt_010>11,000won (500gold)</option><option value=13200|600|gt_011>13,200won (600gold)</option><option value=14900|680|gt_012>14,900won (680gold)</option><option value=19300|880|gt_013>19,300won (880gold)</option><option value=21500|980|gt_014>21,500won (980gold)</option><option value=28100|1280|gt_015>28,100won (1,280gold)</option><option value=34700|1580|gt_016>34,700won (1,580gold)</option><option value=36900|1680|gt_017>36,900won (1,680gold)</option><option value=41300|1880|gt_018>41,300won (1,880gold)</option><option value=43500|1980|gt_019>43,500won (1,980gold)</option><option value=56700|2580|gt_020>56,700won (2,580gold)</option><option value=58900|2680|gt_021>58,900won (2,680gold)</option><option value=63300|2880|gt_022>63,300won (2,880gold)</option><option value=65500|2980|gt_023>65,500won (2,980gold)</option><option value=72100|3280|gt_024>72,100won (3,280gold)</option><option value=85300|3880|gt_025>85,300won (3,880gold)</option><option value=107300|4880|gt_026>107,300won (4,880gold)</option><option value=129300|5880|gt_027>129,300won (5,880gold)</option><option value=135900|6180|gt_028>135,900won (6,180gold)</option><option value=142500|6480|gt_029>142,500won (6,480gold)</option>					</select>	
+					&nbsp;&nbsp;
+					Bonus Gold
+					<input type="text" name="ticket" size="5" value=0>
+		&nbsp;&nbsp;
+
+		<input type="button" class="btn4"  onmouseover="this.style.backgroundColor='#cccccc'" onmouseout="this.style.backgroundColor=''" onfocus='this.blur()' style='cursor:hand' value="Submit" onclick="javascript:goCharge();">
+	</td>
+	</form>
+</tr> -->
+</table>
+<iframe name="chargeFrame" width="100%" height="100%" frameborder=1></iframe>
