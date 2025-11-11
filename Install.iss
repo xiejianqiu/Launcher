@@ -115,9 +115,9 @@ Source: "D:\Launcher\publish\*"; DestDir: "{app}"; Flags: ignoreversion recurses
 ;Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Registry]
-Root: HKLM; SubKey: Software\LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
-Root: HKLM; SubKey: Software\LaunchCyyFrxx; ValueName: "URL Protocol";ValueData:{app}\{#MyAppExeName}; Flags: CreateValueIfDoesntExist; ValueType: string;
-Root: HKLM; SubKey: Software\LaunchCyyFrxx\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: CreateValueIfDoesntExist; ValueType: string;
+Root: HKCR; SubKey: Software\LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
+Root: HKCR; SubKey: Software\LaunchCyyFrxx; ValueName: "URL Protocol";ValueData:{app}\{#MyAppExeName}; Flags: CreateValueIfDoesntExist; ValueType: string;
+Root: HKCR; SubKey: Software\LaunchCyyFrxx\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: CreateValueIfDoesntExist; ValueType: string;
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Parameters: " {code:GetAllParam}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
