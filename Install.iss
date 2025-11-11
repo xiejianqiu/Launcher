@@ -121,8 +121,8 @@ Root: HKCR; SubKey: LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string
 Root: HKCR; SubKey: LaunchCyyFrxx; ValueName: "URL Protocol";ValueData:{app}\{#MyAppExeName}; Flags: CreateValueIfDoesntExist; ValueType: string;
 Root: HKCR; SubKey: LaunchCyyFrxx\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: CreateValueIfDoesntExist; ValueType: string;
 
-Root: HKCR; SubKey: Local Settings\Software\Microsoft\Windows\Shell\MuiCache; ValueName:"{app}\{#MyAppExeName}.ApplicationCompany"; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist; ValueType: string;
-Root: HKCR; SubKey: Local Settings\Software\Microsoft\Windows\Shell\MuiCache; ValueName:"{app}\{#MyAppExeName}.FriendlyAppName"; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist; ValueType: string;
+;Root: HKCR; SubKey: Local Settings\Software\Microsoft\Windows\Shell\MuiCache; ValueName:"{app}\{#MyAppExeName}.ApplicationCompany"; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist; ValueType: string;
+;Root: HKCR; SubKey: Local Settings\Software\Microsoft\Windows\Shell\MuiCache; ValueName:"{app}\{#MyAppExeName}.FriendlyAppName"; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist; ValueType: string;
 ; 设置显示名称 → 浏览器弹窗中显示为“打开 범인수선”
 ;Root: HKCR; SubKey: "LaunchCyyFrxx"; ValueName: ""; ValueType: string; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist UninsDeleteKey;
 ;Root: HKCR; SubKey: LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
