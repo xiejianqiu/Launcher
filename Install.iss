@@ -5,7 +5,9 @@
 #define MyAppVersion "1.0.0.2"
 #define MyAppPublisher "Bomnalsoft Co., Ltd."
 #define MyAppURL ""
-#define MyAppExeName "Game Launch.exe"
+; #define MyAppExeName "Game Launch.exe"
+#define MyAppExeName "범인수선.exe"
+
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -115,6 +117,10 @@ Source: "D:\Launcher\publish\*"; DestDir: "{app}"; Flags: ignoreversion recurses
 ;Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Registry]
+;Root: HKCR; SubKey: LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
+;Root: HKCR; SubKey: LaunchCyyFrxx; ValueName: "URL Protocol";ValueData:{app}\{#MyAppExeName}; Flags: CreateValueIfDoesntExist; ValueType: string;
+;Root: HKCR; SubKey: LaunchCyyFrxx\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: CreateValueIfDoesntExist; ValueType: string;
+
 ; 设置显示名称 → 浏览器弹窗中显示为“打开 범인수선”
 ;Root: HKCR; SubKey: "LaunchCyyFrxx"; ValueName: ""; ValueType: string; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist UninsDeleteKey;
 Root: HKCR; SubKey: LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
