@@ -32,7 +32,7 @@ ArchitecturesInstallIn64BitMode=x64compatible
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
-OutputBaseFilename=frxx
+OutputBaseFilename=frxx_{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -116,8 +116,8 @@ Source: "D:\Launcher\publish\*"; DestDir: "{app}"; Flags: ignoreversion recurses
 
 [Registry]
 ; 设置显示名称 → 浏览器弹窗中显示为“打开 범인수선”
-Root: HKCR; SubKey: "LaunchCyyFrxx"; ValueName: ""; ValueType: string; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist UninsDeleteKey;
-;Root: HKCR; SubKey: LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
+;Root: HKCR; SubKey: "LaunchCyyFrxx"; ValueName: ""; ValueType: string; ValueData: "범인수선"; Flags: CreateValueIfDoesntExist UninsDeleteKey;
+Root: HKCR; SubKey: LaunchCyyFrxx; ValueData: "LaunchCyyFrxx"; ValueType: string; Flags: CreateValueIfDoesntExist UninsDeleteKey;
 Root: HKCR; SubKey: LaunchCyyFrxx; ValueName: "URL Protocol";ValueData:{app}\{#MyAppExeName}; Flags: CreateValueIfDoesntExist; ValueType: string;
 Root: HKCR; SubKey: LaunchCyyFrxx\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: CreateValueIfDoesntExist; ValueType: string;
 
