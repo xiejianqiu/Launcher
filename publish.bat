@@ -1,3 +1,4 @@
+REM Í¸?Ù¤ÖµÓðÍóð¤÷»?ú¼£¬Üú??Ùþ?????
 SET CUR_PATH=%CD%
 SET OUTPUT=%CUR_PATH%\publish
 REM publish -c Release -o ./publish
