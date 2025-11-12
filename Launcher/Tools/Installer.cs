@@ -57,7 +57,7 @@ namespace Launcher
                                 }
                                 zipArchiveEntry.ExtractToFile(filePath);
                                 OnProgressHandler?.Invoke(nofUnzip * 1f / nOfFiles);
-                                if (0 == nofUnzip % 1000)
+                                if (0 == nofUnzip % 3000)
                                     Thread.Sleep(100);
                             }
                             IsUnzipFinish = true;
