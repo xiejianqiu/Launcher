@@ -78,9 +78,17 @@ namespace Launcher
 
             if (CanOpenLoginWindow)
             {
-                var pargma = Environment.GetCommandLineArgs()[1];
-                LogTool.Instance.Info($"###CommandLine 参数:{pargma}");
-                CommonTools.RunExe(GameConfig.GameExe, pargma);
+                var args = Environment.GetCommandLineArgs();
+                if (args.Length > 1 && args[1].Contains("uid"))
+                {
+                    var pargma = args[1];
+                    LogTool.Instance.Info($"###CommandLine 参数:{pargma} Length:{args.Length}");
+                    CommonTools.RunExe(GameConfig.GameExe, pargma);
+                }
+                else
+                {
+                    MessageBox.Show(TIPS.INSTALL_SUCCESS);
+                }
                 CommonTools.Exit();
                 CanOpenLoginWindow = false;
             }

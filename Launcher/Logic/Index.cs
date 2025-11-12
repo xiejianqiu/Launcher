@@ -51,7 +51,8 @@ namespace Launcher
             {
                 if (!result)
                 {
-                    MessageBox.Show("获取资源版本信息失败，请检查网络是否畅通!");
+                    MessageBox.Show(TIPS.DOWNLOAD_FAILED);
+                    LogTool.Instance.Error("Index.OnGetNewAppVerInfo 获取资源版本信息失败，请检查网络是否畅通!");
                     return;
                 }
                 bool NeedUpdate = false;
