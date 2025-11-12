@@ -138,10 +138,15 @@ namespace Launcher
     }
     public class TIPS
     {
-        public const string GET_VERSION_INFO = "正在获取版本信息...{0:f2}%";
-        public const string IN_DOWNLOAD_ZIPFILE = "正在更新游戏版本...{0:f2}%";
-        public const string IN_UNZIP = "正在解压文件...{0:f2}%";
-        public const string START_GAME = "正在启动游戏...{0:f2}%";
-        public const string DOWNLOAD_FAILED = "下载失败，请尝试重启";
+        //public const string GET_VERSION_INFO = "正在获取版本信息...{0:f2}%";
+        //public const string IN_DOWNLOAD_ZIPFILE = "正在更新游戏版本...{0:f2}%";
+        //public const string IN_UNZIP = "正在解压文件...{0:f2}%";
+        //public const string START_GAME = "正在启动游戏...{0:f2}%";
+        //public const string DOWNLOAD_FAILED = "下载失败，请尝试重启";
+        public const string GET_VERSION_INFO = "버전 정보를 가져오는 중...{0:f2}%";
+        public const string IN_DOWNLOAD_ZIPFILE = "게임 버전을 업데이트하는 중...{0:f2}%";
+        public const string IN_UNZIP = "파일을 압축 해제하는 중...{0:f2}%";
+        public const string START_GAME = "게임을 시작하는 중...{0:f2}%";
+        public const string DOWNLOAD_FAILED = "다운로드 실패, 다시 시작해 주세요.";
     }
 }
