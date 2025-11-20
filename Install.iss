@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Frxx"
-#define MyAppVersion "1.0.0.2"
+#define MyAppVersion "1.0.0.3"
 #define MyAppPublisher "Bomnalsoft Co., Ltd."
 #define MyAppURL ""
 #define MyAppExeName "Game Launch.exe"
