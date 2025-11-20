@@ -75,6 +75,17 @@ namespace Launcher
                 }
             });
         }
+        public static void UnZip2(string zipFilePath, string unZipDir, Action<float> OnProgressHandler, Action<bool, string> onUnzipAppResult)
+        {
+            Task.Run(() =>
+            {
+                OnProgressHandler?.Invoke(0.9f);
+                ZipFile.ExtractToDirectory(zipFilePath, unZipDir);
+                OnProgressHandler?.Invoke(1f);
+                onUnzipAppResult?.Invoke(true, zipFilePath);
+            });
+           
+        }
         /// <summary>
         /// 调用bat删除目录，以防止系统底层的异步删除机制
         /// </summary>

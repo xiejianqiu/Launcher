@@ -150,7 +150,7 @@ namespace Launcher
             {
                 File.Delete(GameConfig.LocaGameAppInfo);
             }
-            Installer.UnZip(zipFile, gamePath, OnUnzipProgresssHandler, OnUnzipAppResult);
+            Installer.UnZip2(zipFile, gamePath, OnUnzipProgresssHandler, OnUnzipAppResult);
         }
         void OnUnzipProgresssHandler(float progress)
         {

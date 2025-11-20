@@ -133,8 +133,8 @@ namespace Launcher
         }
         public const string newAppVerUrl = "https://cdn.cyygame.cn/game/tgsw3/koreapc/packages/newAppInfo.json";
         public const int ProgressOfStartUp = 10;
-        public const int ProgressOfDLZip = 60;
-        public const int ProgressOfUnzip = 30;
+        public const int ProgressOfDLZip = 85;
+        public const int ProgressOfUnzip = 5;
     }
     public class TIPS
     {
