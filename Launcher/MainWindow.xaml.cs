@@ -39,7 +39,8 @@ namespace Launcher
             Index.Inst.StepChangeEvent += OnStepChangeEvent;
             Index.Inst.OpenChannelLoginWindow += OpenChannelLoginWindow;
             Index.Inst.Start();
-            CommonTools.CreateDesktopShortcut();
+            //屏蔽创建桌面快捷方式
+            //CommonTools.CreateDesktopShortcut();
             //LogTool.Instance.Info($"MainWindow Start {GameConfig.CHANNEL_LOGIN_URL}");
         }
 
