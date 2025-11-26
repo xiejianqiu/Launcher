@@ -131,7 +131,7 @@ namespace Launcher
                 return Path.Combine(GameConfig.GameSavePath, "AppInfo.json");
             }
         }
-        public const string newAppVerUrl = "https://cdn.cyygame.cn/game/tgsw3/koreapc/packages/newAppInfo.json";
+        public const string newAppVerUrl = "https://res-bis.bomgames.com/game/packages/newAppInfo.json";
         public const int ProgressOfStartUp = 10;
         public const int ProgressOfDLZip = 85;
         public const int ProgressOfUnzip = 5;
