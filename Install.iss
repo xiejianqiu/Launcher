@@ -3,7 +3,7 @@
 
 #define MyAppName "범인수선"
 #define MyAppDirName "Frxx"
-#define MyAppVersion "1.0.0.4"
+#define MyAppVersion "1.0.0.5"
 #define MyAppPublisher "Bomnalsoft Co., Ltd."
 #define MyAppURL ""
 #define MyAppExeName "Game Launch.exe"
